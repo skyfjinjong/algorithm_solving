@@ -1,0 +1,25 @@
+def solution(participant, completion):
+    part = {}
+    comp = {}
+    
+    for player in participant:
+        if player not in part:
+            part[player] = 1
+        else:
+            part[player] += 1
+    
+    for player in completion:
+        if player not in comp:
+            comp[player] = 1
+        else:
+            comp[player] += 1
+    
+    for key in part:
+        if key not in comp:
+            answer = key
+        elif part[key]!=comp[key]:
+            answer = key
+        else:
+            pass
+
+    return answer
