@@ -1,0 +1,14 @@
+def kthNum(arr1, arr2):
+    rawArr = arr1
+    commandArr = arr2
+    res = []
+    for i in range(0, len(commandArr)):
+        tmpArr = rawArr[commandArr[i][0]-1:commandArr[i][1]]
+        tmpArr.sort()
+        res.append(tmpArr[commandArr[i][-1]-1])
+    
+    return res
+    
+def solution(array, commands):
+    answer = kthNum(array, commands)
+    return answer
